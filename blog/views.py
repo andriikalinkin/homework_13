@@ -11,5 +11,5 @@ def all_posts(request):
 
 # @cache_page(60 * 15)
 def post(request, blog_id: int):
-    blog = get_object_or_404(Blog, id=blog_id)
-    return render(request, "blog.html", {"blog": blog})
+    post = get_object_or_404(Blog, id=blog_id)
+    return render(request, "post.html", {"post": post})
