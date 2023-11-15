@@ -13,4 +13,4 @@ def posts(request):
 @cache_page(60)
 def post(request, blog_id: int):
     one_post = get_object_or_404(Blog, id=blog_id)
-    return render(request, "post.html", {"one_post": one_post})
+    return render(request, "one_post.html", {"one_post": one_post})

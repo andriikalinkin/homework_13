@@ -24,7 +24,7 @@
     <title>All Posts</title>
 </head>
 <body>
-    {% for post in posts %}
+    {% for post in all_posts %}
         <a href="{% url "post" post.id %}">{{ post.title }}</a> - {{ post.content|slice:50 }}...<br>
     {%  endfor %}
 </body>
