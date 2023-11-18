@@ -1,11 +1,18 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Post</title>
+    <title>{% block title %}Post{% endblock %}</title>
 </head>
 <body>
-    <h1>{{ one_post.title }}</h1>
-    <p>{{ one_post.content }}</p>
+
+    {% block content %}
+        <h1>{{ one_post.title }}</h1><br>
+        {{ one_post.content }}
+    {% endblock %}
+
 </body>
 </html>
