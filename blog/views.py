@@ -4,7 +4,6 @@ from django.views.decorators.cache import cache_page
 from .models import Blog
 
 
-@cache_page(60)
 def posts(request):
     all_posts = Blog.objects.all()
     return render(request, "all_posts.html", {"all_posts": all_posts})
