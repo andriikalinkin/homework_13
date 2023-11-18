@@ -18,7 +18,7 @@ class Command(BaseCommand):
         for i in range(count):
             post = Blog.objects.create(
                 title=fake.word().capitalize(),
-                content=fake.text(),
+                content=fake.text(500),
             )
 
             self.stdout.write(
